@@ -109,7 +109,7 @@ https://docs.pipz.com/central-de-ajuda/learning-center/guia-basico-de-markdown#o
  
 git add *
 git commit -m "aula git"
-
+git status
 ---------------------------
 
 
