@@ -1,0 +1,123 @@
+Comandos windows para acessar e manipular pastas e arquivos:
+- cd: Navega entra as pastas
+- dir: Lista as pastas e arquivos
+- mkdir: cria a pasta
+- del: Remove o arquivo dentro da pasta
+- rmdir /S /Q: Remove todos os arquivos e a pasta
+
+Git: Versão 2.30 ou superior.
+Usar a branch principal como main, mas alguns repositórios mais antigos, geram em master a branch principal.
+
+Entendendo como o git funciona por debaixo dos panos:
+- SHA1: Algoritmo de Hash Seguro
+- Objetos Fundamentais
+- Sistema distribuido
+- Segurança
+
+Usando o Sha1 para gerar o hash e compartilhar arquivos de forma segura e detectar se o arquivo sofreu modificações.
+- openssl sha1 Git.txt
+
+Objetos internos do Git:
+- Blobs
+- Trees
+- Commits
+
+Blobs: 
+echo 'conteudo' | git hash-object --stdin   ---> Feito através da função do git. ela cria um objeto que tem o blob, que tem o tipo do objeto, o tamanho, uma \0 e o conteúdo. ele adiciona mais informações do que o nomal. devolve o sha1, com os 40 caracteres que identifica o arquivo
+
+echo -e 'conteudo' | openssl1 sha1
+gera um outro conjunto de caracteres no sha1
+
+Tree - Armazena Blobs. Aponta para eles. Árvores contem metadados:
+\0 
+tamanho 
+blob 
+sha1 do metadado
+nome do arquivo.txt
+
+Elas podem apontar para outras árvores ou blobs
+
+Commit é o objeto que vai juntar tudo. Ele aponta para um árvore, para um parente que é o último commit, aponta para o autor e para a mensagem. tem os metadados:
+árvore e sha1
+parente e sha1
+autor
+mensagem
+timestamp (carimbo de tempo)
+
+Chaves SSH e Tokens
+Chave SSH e Tokens
+Chave Pública: adiciona no github para ele reconhecer a nossa máquina
+Chave Privada
+
+Gerar Chave Pública no CLI:
+ssh-keygen -t ed25519 -C olivalpaulinocc@gmail.com
+Generating public/private ed25519 key pair. 
+Gerando o par de chaves (Pública e Privada)
+
+Enter file in which to save the key
+(/c/Users/Núcleo/.ssh/id_ed25519):
+Local onde será criada as chaves
+
+Enter e adicione uma senha
+A sua identificação e a chave pública e privada são salvas na pasta
+.ssh
+
+A chave pública é a que é utilizada para se comunicar
+com o github
+
+No github adicione na sessão SSH and GPG Keys
+New
+Title: É o nome do seu computador que está conectado
+Key: é a chave pública, a assinatura.
+
+Depois autenticar com a senha.
+Para a chave funcionar ainda precisa ser realizado 
+os processos abaixos.
+
+Inicializar o ssh alias
+eval $(ssh-agent -s)
+Autentiticar com a mesma senha que foi definida
+para a criação da chave
+É criado a informação: Agent pid 1445
+
+Agora, vamos entregar a chave
+ssh-add id_ed25519 (informar a chave privada para
+descriptografar as mensagens que forem recebidas).
+
+Identidade Adicionada.
+------------------------
+Adicionada e já pode ir no repositório, e clonar na opção SSH
+
+git clone adicionar_caminho_ssh_aqui
+------------------------------------
+
+Token de Acesso Pessoal
+
+
+Primeiros comandos com Git -------------------------
+git init
+git add .
+git commit
+
+configurando repositório
+git init
+git config --global user.email "olivalpaulinocc@gmail.com"
+git config --global user.name Olival
+
+#Markdown .md
+https://docs.pipz.com/central-de-ajuda/learning-center/guia-basico-de-markdown#open
+ 
+git add *
+git commit -m "aula git"
+
+---------------------------
+
+
+
+
+
+
+
+
+
+
