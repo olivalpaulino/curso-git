@@ -111,13 +111,28 @@ git add *
 git commit -m "aula git"
 git status
 ---------------------------
+Programa para visualizar arquivos em mark
+https://stackedit.io/app#
+---------
+git config --list (mostra todas as configurações do git)
+
+Realizar alterações no git
+git config --global --unset + a propriedade a ser alterada
+git config --global --unset user.email
+git config --global --unset user.name
+
+é o --unset que remove as configurações já definidas anteriormente
+----------------------------
+Comando git e github, estando no repositório
+git init
+add .
+git commit -m ""
+git remote add origin url_do_repositorio
+git push -u origin main
 
 
 
 
 
 
-
-
-
-
+------
