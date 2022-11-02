@@ -131,7 +131,13 @@ git remote add origin url_do_repositorio
 git push -u origin main (enviar arquivos para o repositório)
 git pull origin main (puxar arquivos do repositório para a máquina local)
 
+Merge ----------
+Erros podem acontecer quando pessoas diferentes fazem modificações na mesma linha de código. Nesses casos, o git informará um erro de envio rejeitado e você precisará fazer o pull (baixar o repositório atualizado) e então, fazer as modificações em cima deste respositório atualizado. Assim, evita o conflito e as atualizações passam a estar presente no repositório.
 
+Clonar repositório:
+git clone url_do_repositorio
+
+é diferente de baixar uma pasta comum com o projeto. Com git clone, ele já vem preparado com o git. Origem, para onde aponta, arquivos git e mais.
 
 
 
