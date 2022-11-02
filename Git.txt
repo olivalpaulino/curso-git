@@ -128,7 +128,8 @@ git init
 add .
 git commit -m ""
 git remote add origin url_do_repositorio
-git push -u origin main
+git push -u origin main (enviar arquivos para o repositório)
+git pull origin main (puxar arquivos do repositório para a máquina local)
 
 
 
