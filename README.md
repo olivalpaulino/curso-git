@@ -1,6 +1,3 @@
-:chicken:
-:dog:
-:heart:
 :computer:
-**negrito**
-_meu texto em italico_
+**Olival Paulino**
+_Criando arquivo markdown.md_
