@@ -139,7 +139,8 @@ git clone url_do_repositorio
 
 é diferente de baixar uma pasta comum com o projeto. Com git clone, ele já vem preparado com o git. Origem, para onde aponta, arquivos git e mais.
 
-
+git remote -v
+Mostra os repositórios ao qual o diretório da sua máquina esteja apontando.
 
 
 ------
